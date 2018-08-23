@@ -186,7 +186,7 @@ function returnInShop(){
 		mainBody.removeAttribute('class');				
 }
 
-//Close bask onclick to div blockand button x
+//Close bask onclick to div or button x
 function unBlock(){
 	returnInShop()
 }
