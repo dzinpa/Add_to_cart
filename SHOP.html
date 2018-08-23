@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Цветы</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--подключилиJQuery -->
+	<script src="SHOP.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet"href="SHOP.css">
+<script>
+</script>
+	</head>
+<body onload="go()">
+<div id="mainBody">
+	
+	<div class="header">
+		<div class="menuBackground">
+			<div class="menuContent">
+				<div class="rightMenu">
+					<ul>
+						<li> <a href="#">О магазине</a></li>
+						<li> <a href="#">Доставка</a></li>
+						<li> <a href="#">Как заказать?</a></li>
+						<li> <a href="#">Как оплатить?</a></li>
+						<li> <a href="#">Контакты</a></li>
+						<li> <a href="#">Связаться с нами</a></li>
+					</ul>
+				</div>
+				
+				<div class="leftMenu">
+					<button><img src="Icons/key.png" alt="key">Вход</button> или <a href="#"><img src="Icons/man.png"alt="man">Регистрация</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="contentHeader">
+			<div class="logo">
+				<h3>Flowers</h3>
+				<img src="IMAGES/logo.png" alt="logo">
+			</div>
+			
+			<div class="contacts">
+				<img src="Icons/telephone.png" alt="tel"> +37129555666,+37129666555 <img src="Icons/website.png" alt="web"> www.ziedi.lv  <img src="Icons/letter.png" alt="letter"> info@ziedi.lv
+			</div>
+			
+			<div class="baskBlock">
+				<div class="search">
+					<input type="text" placeholder="  Поиск по сайту"><button><img src="Icons/search.png" alt="search"></button>
+				</div>
+				
+				<div class="emptyBasket" onclick="showBask();">
+					<div class="cart" ><img src="Icons/cart.png" alt="cart"></div>
+					<div class="empty"><p><span class="ending">Корзина пуста</span></p></div>
+				</div>
+				
+<!--HERE THE GOODS ARE ADDED-->
+
+				<div class="baskWrap">					
+					<div class="shoppingBasket" id="bask">
+						<div id="close" onclick="unBlock();">x</div>
+						<p class="dialogTitle"> В корзине<span data-count="0" class="count">0</span><span class="ending">товар</span>, сумма<span data-price="0" id="price">0</span>евро</p>
+						<table id="tableOrder"></table>
+						<div>
+							<p class="totalPrice">Всего<span data-price="0" id="totalPrice">0</span>евро</p>
+							<a href="#" class="back" onclick="returnInShop();">&#8592 Вернуться к покупкам</a>
+							<a href="http://localhost/PHP/M.D.3/indexMD3.php#" class="checkOut">Оформить заказ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	<div class="banner">
+		<div class="carusel" id="carusel">
+			<img src="Carusel_img/carusel_1.jpg" id="image">
+				<div class="bannerText1 bannerText"><p>Если любишь цветок - единственный, какого больше <p>нет ни на одной из многих миллионов звезд,</p></p></div>
+				<div class="bannerText2 bannerText"><p>этого довольно: смотришь на небо  <p>и чувствуешь себя счастливым.И говоришь себе:</p></p></div>
+				<div class="bannerText3 bannerText"><p>"Где-то там живет мой цветок...". <p>С.Экзюпери "Маленький принц"</p></p></div>
+			<a href="#" class="circle1 circle"></a>
+			<a href="#" class="circle2 circle"></a>
+			<a href="#" class="circle3 circle"></a>
+				<button class="leftButton"> < </button>
+				<button class="rightButton"> > </button>
+		</div>
+	</div>
+	
+	<div class="mainMenu">
+		<table>
+			<tr>
+				<td><a><span>Срезанные цветы</span></a></td>
+				<td><a><span>Цветочные букеты</span></a></td>
+				<td><a><span>Свадебная флористика</span></a></td>
+				<td><a><span>Коробочки с цветами</span></a></td>
+				<td><a><span>Цветочные корзины</span></a></td>
+				<td><a><span>Композиции</span></a></td>
+				<td><a><span>Траурная флористика</span></a></td>
+			</tr>
+		</table>
+	</div>
+	</div><!--end header-->
+	
+	<!--MAIN CONTENT-->
+	<div class="mainContent">
+		<div class="content">
+			<div class="title"><h3>Популярные товары</h3></div>
+			<section>
+<!--GOODS-->
+				<div class="price">
+					<div class="larger">
+						<img class="ziedi" src="IMAGES/z1.jpg" title="Ziedi" >
+						<a href="#" title="Букет"><h5>Великолепный букет NR 1</h5></a>
+						<p >27€</p>
+						<div class="form" class="number">
+							<input class="amount" type="text" value="1">
+							<button class="plus" >+</button>
+							<button class="minus">-</button>
+						</div>
+
+						<div class="butBuy">
+							<button class="buy" data-id="1" data-count="1" data-price="27"><span>Купить</span></button>
+						</div>
+			
+						<div class="details">
+							<p>В список желаний</p>
+							<p>В список сравнений</p>
+							<p>Великолепный букет NR 1</p>
+						</div>
+					</div>
+				</div>
+<!--GOODS-->
+				<div class="price">
+					<div class="larger">
+						<img class="ziedi" src="IMAGES/z16.jpg" title="Ziedi" >
+						<a href="#" title="Букет"><h5>Великолепный букет NR16</h5></a>
+						<p >30€</p>
+						<div class="form" class="number">
+							<input class="amount" type="text" value="1">
+							<button class="plus" >+</button>
+							<button class="minus">-</button>
+						</div>
+
+						<div class="butBuy">
+							<button class="buy" data-id="2" data-count="1" data-price="30"><span>Купить</span></button>
+						</div>
+			
+						<div class="details">
+							<p>В список желаний</p>
+							<p>В список сравнений</p>
+							<p>Великолепный букет NR16</p>
+						</div>
+					</div>
+				</div>
+<!--GOODS-->
+				<div class="price">
+					<div class="larger">
+						<img class="ziedi" src="IMAGES/z9.jpg" title="Ziedi" >
+						<a href="#" title="Букет"><h5>Корзина с цветами Nr 1</h5></a>
+						<p >35€</p>
+						<div class="form" class="number">
+							<input class="amount" type="text" value="1">
+							<button class="plus" >+</button>
+							<button class="minus">-</button>
+						</div>
+
+						<div class="butBuy">
+							<button class="buy" data-id="3" data-count="1" data-price="35"><span>Купить</span></button>
+						</div>
+			
+						<div class="details">
+							<p>В список желаний</p>
+							<p>В список сравнений</p>
+							<p>Корзина с цветами Nr 1</p>
+						</div>
+					</div>
+				</div>
+<!--GOODS-->
+				<div class="price">
+					<div class="larger">
+						<img class="ziedi" src="IMAGES/z12.jpg" title="Ziedi" >
+						<a href="#" title="Букет"><h5>Великолепный букет NR12</h5></a>
+						<p >32€</p>
+						<div class="form" class="number">
+							<input class="amount" type="text" value="1">
+							<button class="plus" >+</button>
+							<button class="minus">-</button>
+						</div>
+
+						<div class="butBuy">
+							<button class="buy" data-id="4" data-count="1" data-price="32"><span>Купить</span></button>
+						</div>
+			
+						<div class="details">
+							<p>В список желаний</p>
+							<p>В список сравнений</p>
+							<p>Великолепный букет NR12</p>
+						</div>
+					</div>
+				</div>
+<!--GOODS-->
+				<div class="price">
+					<div class="larger">
+						<img class="ziedi" src="IMAGES/z18.jpg" title="Ziedi" >
+						<a href="#" title="Букет"><h5>Великолепный букет NR18</h5></a>
+						<p >24€</p>
+						<div class="form" class="number">
+							<input class="amount" type="text" value="1">
+							<button class="plus" >+</button>
+							<button class="minus">-</button>
+						</div>
+
+						<div class="butBuy">
+							<button class="buy" data-id="5" data-count="1" data-price="24"><span>Купить</span></button>
+						</div>
+			
+						<div class="details">
+							<p>В список желаний</p>
+							<p>В список сравнений</p>
+							<p>Великолепный букет NR18</p>
+						</div>
+					</div>
+				</div>
+<!--GOODS-->
+				<div class="price">
+					<div class="larger">
+						<img class="ziedi" src="IMAGES/z19.jpg" title="Ziedi" >
+						<a href="#" title="Букет"><h5>Великолепный букет NR19</h5></a>
+						<p>30€</p>
+						<div class="form" class="number">
+							<input class="amount" type="text" value="1">
+							<button class="plus" >+</button>
+							<button class="minus">-</button>
+						</div>
+
+						<div class="butBuy">
+							<button class="buy" data-id="6" data-count="1" data-price="30"><span>Купить</span></button>
+						</div>
+			
+						<div class="details">
+							<p>В список желаний</p>
+							<p>В список сравнений</p>
+							<p>Великолепный букет NR19</p>
+						</div>
+					</div>
+				</div>	
+<!--GOODS-->
+				<div class="price">
+					<div class="larger">
+						<img class="ziedi" src="IMAGES/z20.jpg" title="Ziedi" >
+						<a href="#" title="Букет"><h5>Великолепный букет NR20</h5></a>
+						<p >21€</p>
+						<div class="form" class="number">
+							<input class="amount" type="text" value="1">
+							<button class="plus" >+</button>
+							<button class="minus">-</button>
+						</div>
+
+						<div class="butBuy">
+							<button class="buy" data-id="7" data-count="1" data-price="21"><span>Купить</span></button>
+						</div>
+			
+						<div class="details">
+							<p>В список желаний</p>
+							<p>В список сравнений</p>
+							<p>Великолепный букет NR20</p>
+						</div>
+					</div>
+				</div>
+<!--GOODS-->
+				<div class="price">
+					<div class="larger">
+						<img class="ziedi" src="IMAGES/z22.jpg" title="Ziedi" >
+						<a href="#" title="Букет"><h5>Великолепный букет NR22</h5></a>
+						<p >28€</p>
+						<div class="form" class="number">
+							<input class="amount" type="text" value="1">
+							<button class="plus" >+</button>
+							<button class="minus">-</button>
+						</div>
+
+						<div class="butBuy">
+							<button class="buy" data-id="7" data-count="1" data-price="28"><span>Купить</span></button>
+						</div>
+			
+						<div class="details">
+							<p>В список желаний</p>
+							<p>В список сравнений</p>
+							<p>Великолепный букет NR22</p>
+						</div>
+					</div>
+				</div>
+<!--GOODS-->
+				<div class="price">
+					<div class="larger">
+						<img class="ziedi" src="IMAGES/z24.jpg" title="Ziedi" >
+						<a href="#" title="Букет"><h5>Великолепный букет NR24</h5></a>
+						<p >59€</p>
+						<div class="form" class="number">
+							<input class="amount" type="text" value="1">
+							<button class="plus" >+</button>
+							<button class="minus">-</button>
+						</div>
+
+						<div class="butBuy">
+							<button class="buy" data-id="9" data-count="1" data-price="59"><span>Купить</span></button>
+						</div>
+			
+						<div class="details">
+							<p>В список желаний</p>
+							<p>В список сравнений</p>
+							<p>Великолепный букет NR24</p>
+						</div>
+					</div>
+				</div>				
+			</section>
+		</div>	
+	</div><!--end main content-->
+	
+	<!--FOOTER-->
+	<div class="footer"></div>	
+	<div  id="block" onclick="unBlock();"></div>
+</div><!--end mainBody-->
+</body>
+</html>
